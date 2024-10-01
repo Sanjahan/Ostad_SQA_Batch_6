@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "0ff6278d-d758-4fe1-82e4-f2c6e5d79fa5",
+		"name": "Evershop_io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38013204"
+	},
+	"item": [
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_global_evershop}}search?keyword=Nike react phantom run flyknit 2&ajax=true",
+					"host": [
+						"{{url_global_evershop}}search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Nike react phantom run flyknit 2"
+						},
+						{
+							"key": "ajax",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\": \"NJC48508-Pink-X\",\r\n    \"qty\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_global_evershop}}api/cart/mine/items?ajax=true",
+					"host": [
+						"{{url_global_evershop}}api"
+					],
+					"path": [
+						"cart",
+						"mine",
+						"items"
+					],
+					"query": [
+						{
+							"key": "ajax",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
